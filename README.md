@@ -33,3 +33,6 @@ I'm starting from a raw Amazon EC2 nano instance with Amazon Linux.  The securit
 * python src/MetaOps.py
 * To start the server, sudo python src/Main.py 80 (you can cat to file and tail or whatever you please.)
 * You should be able to navigate to your blog now.
+
+* To add posts, add .md files into the posts/ directory.  Follow the metadata scheme as in the examples.
+* Do the metadata regeneration every time a post is added or metadata is changed.
