@@ -1,0 +1,57 @@
+$def with (params)
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>$params["siteName"]</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+	<link rel = "stylesheet" type = "text/css" href = "../style/default.css" />
+	<link rel = "stylesheet" type = "text/css" href = "../style/style.css" />
+	
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	});
+	</script>
+	<script type="text/javascript"
+	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+</head>
+
+<body>
+
+
+<div id="pre-header"></div>
+<div id="header">
+<div id="header-text">
+<h1>$params["siteName"]</h1>
+<h2>$params["slogan"]</h2>
+</div>
+</div>
+
+<div id="post-header">
+	<ul id="menu">
+	  <li><a href = "../static/about.md">About</a></li>
+	  <li><a href = "$params['twitterUrl']">Twitter</a></li>
+	</ul>  
+</div>
+
+<div id="content">
+$for postInfo in params["blurbs"]: 
+    <h3><a href = "../posts/$postInfo['filename']">$postInfo["title"]</a></h3>
+    $postInfo["date"].strftime('We are the %d, %b %Y') -- $postInfo["tags"] </br>
+    $:postInfo["summary"] <a href = "../posts/$postInfo['filename']">Continue reading</a></br>    
+</div>
+
+<div id="footer">
+</div>
+
+<div id="post-footer">
+	<div class="text-contain">
+	<p>Copyright $:params["siteName"].</p>
+	</div>
+</div>
+
+</body>
+</html>
