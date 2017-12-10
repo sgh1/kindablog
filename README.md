@@ -29,6 +29,7 @@ I'm starting from a raw Amazon EC2 nano instance with Amazon Linux.  The securit
 * cd kindablog
 * vi src/Settings.py (and edit your webRoot to your current working directory and change other settings as needed).
 * Next we have to generate some metadata from the posts, which is a manual process is kindablog.  This should be done everytime a new post is added.
-* To update the metadata, python src/MetaOps.py
+* mkdir meta
+* python src/MetaOps.py
 * To start the server, sudo python src/Main.py 80 (you can cat to file and tail or whatever you please.)
 * You should be able to navigate to your blog now.
