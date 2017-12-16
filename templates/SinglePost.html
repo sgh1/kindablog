@@ -11,7 +11,7 @@ $def with (params)
 	
 	<script type="text/x-mathjax-config">
 	MathJax.Hub.Config({
-	  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	  tex2jax: {inlineMath: [['\$','\$'], ['\\(','\\)']]}
 	});
 	</script>
 	<script type="text/javascript"
@@ -39,8 +39,8 @@ $def with (params)
 
 
 <div id="content">
-<h3>$params["title"]</h3>
-$params["date"].strftime('%d, %b %Y') -- $params["tags"]
+<h2>$params["title"]</h2>
+<small>$params["date"].strftime('%d, %b %Y') -- $params["tags"]</small>
 $:params["content"]
 </div>
 
@@ -57,7 +57,7 @@ $for fileName, title in params["related"].iteritems():
 
 <div id="post-footer">
 	<div class="text-contain">
-	<p>Copyright $:params["siteName"].</p>
+	<p>Copyright $:params["siteName"]. Powered by <a href="http://www.github.com/sgh1/kindablog">kindablog</a></p>
 	</div>
 </div>
 

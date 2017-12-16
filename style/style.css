@@ -16,7 +16,7 @@ a
 {
 	height:20px;	
 }
-#header, #footer{
+#header{
 	height:100px;
 	display: table;
 	width: 780px;
@@ -32,39 +32,38 @@ a
 #header-text h1
 {
 	font-family: 'Open Sans', sans-serif;
-	font-size:1.75em;	
+	font-size:2em;	
 }
 #header-text h2
 {
 	font-family: 'Open Sans', sans-serif;
 	font-size:1.25em;	
 }
-#content
-{
-	margin-top: 40px;
-}
 #content h1
 {
 	font-size: 2em;
 }
-#post-header
+#content h2
 {
-	height:30px;
-	margin-bottom: 20px;
+	margin-bottom:-2px;
 }
 ul#menu li 
 {
     list-style-type: none;
     list-style-position:inside;
+	display: inline-block;
     margin:0;
     padding:0;
+	padding-right:10px;
 }
 #menu
 {
 	padding: 0px;
     position: relative;
     top: 50%;
-    transform: translateY(-50%);	
+	margin: 0px;
+	border-bottom: 1px dotted;
+	border-top: 1px dotted;
 }
 .text-contain
 {

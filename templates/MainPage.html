@@ -39,8 +39,8 @@ $def with (params)
 
 <div id="content">
 $for postInfo in params["blurbs"]: 
-    <h3><a href = "../posts/$postInfo['filename']">$postInfo["title"]</a></h3>
-    $postInfo["date"].strftime('We are the %d, %b %Y') -- $postInfo["tags"] </br>
+    <h2><a href = "../posts/$postInfo['filename']">$postInfo["title"]</a></h2>
+    <small>$postInfo["date"].strftime('We are the %d, %b %Y') -- $postInfo["tags"] </small></br>
     $:postInfo["summary"] <a href = "../posts/$postInfo['filename']">Continue reading</a></br>    
 </div>
 
@@ -49,7 +49,7 @@ $for postInfo in params["blurbs"]:
 
 <div id="post-footer">
 	<div class="text-contain">
-	<p>Copyright $:params["siteName"].</p>
+	<p>Copyright $:params["siteName"]. Powered by <a href="http://www.github.com/sgh1/kindablog">kindablog</a></p>
 	</div>
 </div>
 

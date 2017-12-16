@@ -7,10 +7,10 @@
 class Settings(object):
 
     # Root of website. Contains src/ posts/ static/ img/, etc.
-    webRoot = "/home/ec2-user/site/"
+    webRoot = "/home/ec2-user/kinda-private/"
 
     # Name of the website.
-    siteName = "My minimdcms-based Internet Website"
+    siteName = "My Internet Weblog"
     
     # Slogan.
     slogan = "...brought to you by Carl's Jr."
