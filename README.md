@@ -22,7 +22,7 @@ Here's a procedure for getting kindablog functioning, but some details might dep
 
 I'm starting from a raw Amazon EC2 nano instance with Amazon Linux.  The security rules must accept HTTP/TCP traffic on port 80.
 
-* cd
+* cd (or otherwise navigate to where you want to install)
 * sudo yum install git
 * sudo pip install markdown2, web.py, markdown2Mathjax
 * git clone https://github.com/sgh1/kindablog.git
@@ -32,7 +32,9 @@ I'm starting from a raw Amazon EC2 nano instance with Amazon Linux.  The securit
 * mkdir meta
 * python src/MetaOps.py
 * To start the server, sudo python src/Main.py 80 (you can cat to file and tail or whatever you please.)
-* You should be able to navigate to your blog now.
+Okay, the blog should be started now.  Navigate to your URL to verify.
 
-* To add posts, add .md files into the posts/ directory.  Follow the metadata scheme as in the examples.
+The process for addings posts is as follows:
+
+* Add .md files into the posts/ directory.  Follow the metadata scheme as in the examples.
 * Do the metadata regeneration every time a post is added or metadata is changed.
