@@ -35,11 +35,17 @@ class MetaOps(object):
         # Grouped by tag.  Key is tag, value is list of post md files with tag.
         metaInfo["byTag"] = {}
         
+        # Tags per post.  Key is post file, value is list of tags.
+        metaInfo["perPostTags"] = {}
+        
         # Title/filename map. Key is filename, value is post title.
         metaInfo["byTitle"] = {}
         
         # Sorted by date. Value is list of all articles sorted by date.
         metaInfo["byDate"] = {}
+        
+        # Dictionary of summaries.  Key is post filename, value is summary.
+        metaInfo["summaries"] = {}
             
         # Collect the data.
         for postFile in posts:
@@ -56,9 +62,15 @@ class MetaOps(object):
                 # Add title map entry.
                 metaInfo["byTitle"][postFile] = meta["title"]
                 
+                # Add summary entry.
+                metaInfo["summaries"][postFile] = meta["summary"]
+                
                 # Get list of tags.
                 tags = [x.strip() for x in meta["tags"].split(',')]
                 
+                # Set the per post tags.
+                metaInfo["perPostTags"][postFile] = [x.strip() for x in meta["tags"].split(',')]
+                                
                 # Add to tag lists.
                 for tag in tags:
                     metaInfo["byTag"].setdefault(tag, [])

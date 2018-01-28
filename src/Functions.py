@@ -5,9 +5,12 @@
 
 # Imports
 import Settings
+
 import markdown2
 from markdown2Mathjax import sanitizeInput, reconstructMath
+import os.path
 import pprint
+import web
 
 class Functions(object):
 
@@ -21,15 +24,11 @@ class Functions(object):
         @return: Dictionary of filenames : titles of related articles.
         """
         
-        pprint.pprint(tags)
-        
         # Create dictionary for related articles.
         relatedArticlesDict = {}
         
         # Get related articles from meta data.
         for tag in tags:
-        
-            print "tag: " + tag
         
             # See if the tag is in the meta data.  In theory there should be at least 'this' article, but 
             # we don't explicitly enforce updating the meta info, so it might not be.
@@ -73,5 +72,22 @@ class Functions(object):
         finalOutput = reconstructMath(markedDownText,tmp[1])
         
         return (finalOutput, myMeta)
+        
+    @staticmethod
+    def ReadFile(pageName):
+        """
+        Reads a file and returns contents of that file. If the file is not found, throw a 404.
+
+        @param pageName: File to read with respect to web-root.
+        @return: Contents of file.
+        """
+
+        # Make sure the file exists.
+        if not os.path.exists(Settings.Settings.webRoot + "/" + pageName):
+            raise web.notfound()
+            
+        # Just return the text of the .html file. 
+        with open(Settings.Settings.webRoot + "/" + pageName, 'r') as myfile:
+            return myfile.read()
         
     

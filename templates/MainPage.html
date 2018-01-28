@@ -8,15 +8,6 @@ $def with (params)
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<link rel = "stylesheet" type = "text/css" href = "../style/default.css" />
 	<link rel = "stylesheet" type = "text/css" href = "../style/style.css" />
-	
-	<script type="text/x-mathjax-config">
-	MathJax.Hub.Config({
-	  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-	});
-	</script>
-	<script type="text/javascript"
-	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-	</script>
 </head>
 
 <body>
@@ -25,23 +16,27 @@ $def with (params)
 <div id="pre-header"></div>
 <div id="header">
 <div id="header-text">
-<h1>$params["siteName"]</h1>
+<h1><a href = "../">$params["siteName"]</a></h1>
 <h2>$params["slogan"]</h2>
 </div>
 </div>
 
 <div id="post-header">
 	<ul id="menu">
-	  <li><a href = "../static/about.md">About</a></li>
-	  <li><a href = "$params['twitterUrl']">Twitter</a></li>
+        <li><a href = "../">Home</a></li>
+		<li><a href = "../static-md/links.md">Links</a></li>        
+        <li><a href = "../static-md/about.md">About</a></li>
+        <li><a href = "$params['twitterUrl']">Twitter</a></li>
 	</ul>  
 </div>
 
 <div id="content">
-$for postInfo in params["blurbs"]: 
-    <h2><a href = "../posts/$postInfo['filename']">$postInfo["title"]</a></h2>
-    <small>$postInfo["date"].strftime('We are the %d, %b %Y') -- $postInfo["tags"] </small></br>
-    $:postInfo["summary"] <a href = "../posts/$postInfo['filename']">Continue reading</a></br>    
+$for postInfo in params["blurbs"]:
+    <div class="title-blurb">
+    <b><a href = "../posts/$postInfo['filename']">$postInfo["title"]</a></b> --
+    $postInfo["date"].strftime('%d, %b %Y') -- $postInfo["tags"] -- 
+    $:postInfo["summary"] <a href = "../posts/$postInfo['filename']">Read</a></br>   
+    </div>
 </div>
 
 <div id="footer">

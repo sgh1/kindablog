@@ -21,8 +21,4 @@ class Settings(object):
     # Number of related articles to show.
     relatedArticleListSize = 5
     
-    # Number of characters per article to show on homepage.
-    # There will be trouble if this is shorter than a metadata entry.
-    indexSummarySize = 400
-    
     

@@ -7,16 +7,19 @@ $def with (params)
 	<title>$params["siteName"] - $params["title"]</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<link rel = "stylesheet" type = "text/css" href = "../style/default.css" />
-	<link rel = "stylesheet" type = "text/css" href = "../style/style.css" />
+	<link rel = "stylesheet" type = "text/css" href = "../style/style.css" />	
 	
-	<script type="text/x-mathjax-config">
-	MathJax.Hub.Config({
-	  tex2jax: {inlineMath: [['\$','\$'], ['\\(','\\)']]}
-	});
-	</script>
-	<script type="text/javascript"
-	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-	</script>
+	$if params["hasMath"]: 
+
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		  tex2jax: {inlineMath: [['\$','\$'], ['\\(','\\)']]}
+		});
+		</script>
+		<script type="text/javascript"
+		  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		
 </head>
 
 <body>
@@ -24,7 +27,7 @@ $def with (params)
 <div id="pre-header"></div>
 <div id="header">
 <div id="header-text">
-<h1>$params["siteName"]</h1>
+<h1><a href = "../">$params["siteName"]</a></h1>
 <h2>$params["slogan"]</h2>
 </div>
 </div>
@@ -32,7 +35,8 @@ $def with (params)
 <div id="post-header">
 	<ul id="menu">
         <li><a href = "../">Home</a></li>
-        <li><a href = "../static/about.md">About</a></li>
+		<li><a href = "../static-md/links.md">Links</a></li>        
+        <li><a href = "../static-md/about.md">About</a></li>
         <li><a href = "$params['twitterUrl']">Twitter</a></li>
 	</ul>  
 </div>
