@@ -58,7 +58,9 @@ class MetaOps(object):
 
                 # Get meta info.
                 meta = markedDownText.metadata
-                
+               
+                pprint.pprint(meta)
+ 
                 # Add title map entry.
                 metaInfo["byTitle"][postFile] = meta["title"]
                 

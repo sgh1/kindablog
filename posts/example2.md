@@ -2,6 +2,7 @@
 title: Example 2 -- Barnes-Hut Algorithm
 date: 2017.12.2
 tags: python, c++, programming
+summary: a post about the Barnes-Hut algorithm
 ---
 
 The Barnes–Hut simulation (Josh Barnes and Piet Hut) is an approximation algorithm for performing an n-body simulation. It is notable for having order O(n log n) compared to a direct-sum algorithm which would be O(n2).[1]

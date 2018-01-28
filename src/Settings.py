@@ -7,7 +7,7 @@
 class Settings(object):
 
     # Root of website. Contains src/ posts/ static/ img/, etc.
-    webRoot = "/home/ec2-user/kinda-private/"
+    webRoot = "/home/ec2-user/kindablog/"
 
     # Name of the website.
     siteName = "My Internet Weblog"
