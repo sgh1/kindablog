@@ -32,6 +32,7 @@ I'm starting from a raw Amazon EC2 nano instance with Amazon Linux.  The securit
 * mkdir meta
 * python src/MetaOps.py
 * To start the server, sudo python src/Main.py 80 (you can cat to file and tail or whatever you please.)
+
 Okay, the blog should be started now.  Navigate to your URL to verify.
 
 The process for addings posts is as follows:
