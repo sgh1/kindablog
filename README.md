@@ -24,7 +24,7 @@ I'm starting from a raw Amazon EC2 nano instance with Amazon Linux.  The securit
 
 * cd (or otherwise navigate to where you want to install)
 * sudo yum install git
-* sudo pip install markdown2, web.py, markdown2Mathjax
+* sudo pip install markdown2 web.py markdown2Mathjax pygments
 * git clone https://github.com/sgh1/kindablog.git
 * cd kindablog
 * vi src/Settings.py (and edit your webRoot to your current working directory and change other settings as needed).
