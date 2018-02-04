@@ -67,3 +67,15 @@
 .codehilite .vi { color: #19177C } /* Name.Variable.Instance */
 .codehilite .vm { color: #19177C } /* Name.Variable.Magic */
 .codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+/* 
+ * Mobile view, screen widths less than 751px wide.
+ * Not really convinced this is a great idea. 
+ */
+@media only screen and (max-width: 750px) 
+{
+	.codehilite pre
+	{
+		white-space: pre-wrap;
+	}
+}

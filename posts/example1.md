@@ -2,6 +2,7 @@
 title: Example 1 -- C++ Programming
 date: 2017.12.1
 tags: c++, programming
+summary: C++ programming stuff
 ---
 
 C++ (pronounced /ˌsiːˌplʌsˈplʌs/ "cee plus plus") is a general-purpose programming language. It has imperative, object-oriented and generic programming features, while also providing facilities for low-level memory manipulation.
