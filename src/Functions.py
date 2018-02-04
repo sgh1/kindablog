@@ -36,7 +36,6 @@ class Functions(object):
             
                 # Create filename / title entry in dictionary
                 for relatedArticle in allMetaDataDict["byTag"][tag]:
-                    print "adding: " + relatedArticle 
                     relatedArticlesDict[relatedArticle] = allMetaDataDict["byTitle"][relatedArticle] 
         
                     # Break if we have enough related articles.

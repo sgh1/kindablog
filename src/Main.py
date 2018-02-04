@@ -120,7 +120,7 @@ class SinglePost:
             "tags"      : ', '.join(myTags),
             "related"   : relatedArticlesDict,
             "content"   : mdHtmlData,
-			"hasMath"	: '$' in mdHtmlData 
+            "hasMath"	: '$' in mdHtmlData 
             }
         
         # Render final output in template.
@@ -150,7 +150,7 @@ class StaticMd:
             "twitterUrl": Settings.Settings.twitterUrl,
             "title"     : myMeta["title"], 
             "content"   : mdHtmlData,
-			"hasMath"	: '$' in mdHtmlData
+            "hasMath"	: '$' in mdHtmlData
             }
                         
         # Render final output in template.
